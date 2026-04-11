@@ -115,7 +115,7 @@ export class PublicMenuComponent implements OnInit {
       const res = await axios.get(`https://vinayakchavda2025-project.onrender.com/public/menu/${this.restaurantId}`);
       this.restaurantInfo = res.data.restaurant_info;
       this.menuData = res.data.menu; // Ab ye nested array hai
-
+      console.log('Fetched Menu Data:.....................................................', this.menuData);
       if (this.menuData.length > 0) {
         this.activeCategory = this.menuData[0].cat_name;
       }
