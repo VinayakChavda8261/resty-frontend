@@ -23,7 +23,8 @@ export class PublicMenuComponent implements OnInit {
   activeCategory = '';
   showCart = false;
   orderLoading = false;
-  apiUrl = environment.apiUrl; 
+  // apiUrl = environment.apiUrl; 
+  apiUrl = 'https://vinayakchavda2025-project.onrender.com'; 
 
   constructor(private route: ActivatedRoute, private toastr: ToastrService) { }
 
