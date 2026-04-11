@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import axios from 'axios';
 import { ToastrService } from 'ngx-toastr';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 declare var Razorpay: any; // Razorpay ke liye global variable
 @Component({
