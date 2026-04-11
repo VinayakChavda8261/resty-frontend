@@ -38,7 +38,7 @@ export class PublicMenuComponent implements OnInit {
     const amount = this.cartTotal;
 
     // 1. Backend se Razorpay Order ID maango
-    const res = await axios.post(`${this.apiUrl}/payments/create-order?amount=${amount}`);
+    const res = await axios.post(`https://vinayakchavda2025-project.onrender.com/payments/create-order?amount=${amount}`);
     const razorpayOrderId = res.data.id;
 
     // 2. Razorpay Popup Options
@@ -62,7 +62,7 @@ export class PublicMenuComponent implements OnInit {
 
   async verifyPaymentOnBackend(paymentData: any) {
     try {
-      const res = await axios.post(`${this.apiUrl}/payments/verify`, {
+      const res = await axios.post(`https://vinayakchavda2025-project.onrender.com/payments/verify`, {
         razorpay_order_id: paymentData.razorpay_order_id,
         razorpay_payment_id: paymentData.razorpay_payment_id,
         razorpay_signature: paymentData.razorpay_signature
@@ -94,7 +94,7 @@ export class PublicMenuComponent implements OnInit {
     };
 
     try {
-      const res = await axios.post(`${this.apiUrl}/public/place-order`, orderPayload);
+      const res = await axios.post(`https://vinayakchavda2025-project.onrender.com/public/place-order`, orderPayload);
 
       if (res.data.status === 'success') {
         this.showCart = false;
@@ -112,7 +112,7 @@ export class PublicMenuComponent implements OnInit {
 
   async fetchMenu() {
     try {
-      const res = await axios.get(`${this.apiUrl}/public/menu/${this.restaurantId}`);
+      const res = await axios.get(`https://vinayakchavda2025-project.onrender.com/public/menu/${this.restaurantId}`);
       this.restaurantInfo = res.data.restaurant_info;
       this.menuData = res.data.menu; // Ab ye nested array hai
 
