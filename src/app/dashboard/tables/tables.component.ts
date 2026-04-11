@@ -22,7 +22,7 @@ interface Table {
 export class TablesComponent implements OnInit {
   tables: any[] = [];
   newTableNumber = '';
-  baseUrl = 'http://192.168.1.5:4200/public-menu'; // Use your Laptop IP
+  baseUrl = 'https://resty-frontend-l1ci-bo3mfro60-vinayakchavda2025-6924s-projects.vercel.app/public-menu'; // Use your Laptop IP
   restaurantId: number | null = null;
 
   constructor(
